@@ -17,9 +17,19 @@
   const XmasCard = Object.create(CardMaker);
 
 
-  console.log(BirthdayCard.makeFrontMessage("birthday front"), BirthdayCard.makeInsideMessage("birthday inside"));
-  console.log(NewYearsCard.makeFrontMessage("new years front"), NewYearsCard.makeInsideMessage("new years inside"));
-  console.log(XmasCard.makeFrontMessage("xmas front"), XmasCard.makeInsideMessage("xmas inside"));
+  console.log(BirthdayCard.makeFrontMessage("Happy Birthday...."), BirthdayCard.makeInsideMessage("..to you!"));
+  console.log(NewYearsCard.makeFrontMessage("Happy New Year!"), NewYearsCard.makeInsideMessage("¯\\\_(ツ)_/¯"));
+  console.log(XmasCard.makeFrontMessage("Merry Xmas"), XmasCard.makeInsideMessage("BLAH BLAH BLAH"));
 
 
-  
+
+
+
+const AdultBday = Object.create(BirthdayCard);
+
+console.log(AdultBday.makeFrontMessage("Happy Birthday, Adult!"), AdultBday.makeInsideMessage("You're an adult and its your birthday!"));
+
+
+let greeting = document.getElementsByClassName("holiday-greeting")[0];
+greeting.innerHTML = AdultBday.makeFrontMessage("Happy Birthday, Adult!") + AdultBday.makeInsideMessage("¯\\\_(ツ)_/¯");
+
